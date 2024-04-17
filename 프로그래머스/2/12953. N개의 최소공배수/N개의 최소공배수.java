@@ -17,7 +17,6 @@ class Solution {
             lcm = (lcm * arr[i]) / gcd;
         }
 
-        System.out.println("the greatest common demoniator : " + gcd);
 
         return lcm;
     }
