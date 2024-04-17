@@ -14,7 +14,11 @@ class Solution {
                 }
             }
             // 이진 변환
-            s= Integer.toBinaryString(new_size);
+            s= "";
+            for(int i = new_size; i>0; ){
+                s+= (i%2);
+                i=i/2;
+            }
             count++;
         }
         answer[0] = count;
