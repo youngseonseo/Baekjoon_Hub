@@ -1,23 +1,12 @@
 import java.util.*;
-import java.util.*;
 
 public class Solution {
-    
-   
     public int solution(int n) {
-        return  cal(n);
-    }
-    
-    public int cal(int cur) {
-        int cnt = 0;
-        while(cur != 0){
-            if(cur % 2 ==0){
-                cur /= 2;
-            } else{
-                cur -=1;
-                cnt++;
-            }
-        }
-        return cnt;
+        int ans = 0;
+
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        System.out.println("Hello Java");
+
+        return ans;
     }
 }
