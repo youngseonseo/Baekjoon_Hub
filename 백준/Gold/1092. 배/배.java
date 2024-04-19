@@ -10,7 +10,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         Integer[] crane = new Integer[N];
-        int[] position= new int[N];
+        int[] position = new int[N];
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
             crane[i] = Integer.parseInt(st.nextToken());
@@ -25,22 +25,22 @@ public class Main {
 
         Arrays.sort(box, Collections.reverseOrder());
         Arrays.sort(crane, Collections.reverseOrder());
-        
+
         if (box[0] > crane[0]) {
             System.out.println("-1");
         } else {
             int time = 0;
-            int cnt = 0; // 옮겨진 박스 개수
+            int cnt = 0;
             while (cnt < M) {
                 for (int i = 0; i < N; i++) {
                     while(position[i] < M){
-                        if(box[position[i]] <= crane[i] && visited[position[i]] == false){
-                            cnt++;
+                        if(crane[i] >= box[position[i]] && visited[position[i]] == false){
                             visited[position[i]] = true;
-                            position[i] += 1;
+                            cnt++;
+                            position[i]++;
                             break;
                         } else{
-                            position[i] ++;
+                            position[i]++;
                         }
                     }
                 }
